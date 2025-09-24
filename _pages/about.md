@@ -1,11 +1,15 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Research Profile"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+I am a Ph.D. candidate in [Department of Computer Science and Engineering](https://cse.nd.edu/) at the [University of Notre Dame](https://www.nd.edu/), advised by [Prof. Chaoli Wang](https://sites.nd.edu/chaoli-wang/). I hold a B.Eng. and an M.Eng. in Mechanical Engineering from [UESTC](https://www.smee.uestc.edu.cn/) and [Xi’an Jiaotong University](https://mec.xjtu.edu.cn/). 
+
+My research focuses on data-efficient generative modeling (diffusion), segmentation-guided learning, and representation learning that tightly couples images, masks, and geometry. Looking ahead, I aim to integrate geometry- and graphics-aware AI with robotic visual perception and control, and to leverage large language models to program and coordinate wearable devices and robots—toward reliable, uncertainty-aware, end-to-end systems that bridge medical imaging and embodied intelligence.
 
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
 
