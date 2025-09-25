@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education — Badge Cards</title>
+  <style>
+    /* ===== Theme & Base ===== */
+    :root {
+      --global-theme-color: #002D72; /* site theme color */
+      --text-color: #111827;
+      --muted-color: #6b7280;
+      --bg-color: #ffffff;
+      --card-border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--text-color);
+      background: #f8fafc;
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    h1 { margin: 0 0 12px; font-size: 1.75rem; line-height: 1.25; }
+    h2, h3 { margin: 0 0 10px; line-height: 1.25; }
+    p { margin: 8px 0; }
+
+    /* ===== Grid & Card ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .card {
+      grid-column: span 12;
+      position: relative; /* anchor for absolute badges */
+      background: var(--bg-color);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    @media (min-width: 840px) { .card { grid-column: span 6; } }
+
+    .meta { font-size: 0.95rem; color: var(--muted-color); }
+    .lead { margin-top: 6px; font-weight: 500; }
+
+    /* ===== Badges ===== */
+    .badge {
+      display: inline-block;
+      background-color: var(--global-theme-color, #002D72);
+      color: #fff !important;
+      padding: 0.3em 1.0em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 0.5rem;
+      font-size: 0.72em;
+      font-weight: 800;
+      text-transform: uppercase;
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+      letter-spacing: 0.04em;
+      z-index: 10;
+    }
+    .badge--tr { top: 0; left: auto; right: 0; }
+    .badge--gold { background-color: #D4AF37; color: #111; }
+    .pad-top { padding-top: 44px; } /* avoid overlapping heading */
+
+    /* Inline badges (pills) */
+    .pill {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    /* Lists inside cards */
+    ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+    ul li { margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Education</h1>
+
+    <div class="grid">
+
+      <!-- University of Notre Dame -->
+      <article class="card pad-top" aria-labelledby="nd-title">
+        <span class="badge" aria-hidden="true">Ph.D.</span>
+        <span class="badge badge--tr" aria-label="Current">Current</span>
+
+        <h3 id="nd-title">University of Notre Dame</h3>
+        <p class="meta">09/2022 — Present · Department of Computer Science &amp; Engineering</p>
+        <p class="lead">
+          Ph.D. Student in Computer Science and Engineering
+          <span class="pill" title="GPA">GPA 3.8 / 4.0</span>
+        </p>
+        <ul>
+          <li><strong>Research interests:</strong> advanced AI methodologies for medical image processing and data visualization.</li>
+          <li><strong>Awards:</strong> SAI Graduate Fellowship (Spring 2025); Zahm Professional Development Fund (Spring 2025).</li>
+        </ul>
+      </article>
+
+      <!-- Xi'an Jiaotong University -->
+      <article class="card pad-top" aria-labelledby="xjtu-title">
+        <span class="badge" aria-hidden="true">M.Eng.</span>
+        <span class="badge badge--tr badge--gold" aria-label="Completed">Completed</span>
+
+        <h3 id="xjtu-title">Xi’an Jiaotong University (XJTU)</h3>
+        <p class="meta">09/2019 — 06/2022 · School of Mechanical Engineering</p>
+        <p class="lead">
+          M.Eng. in Mechanical Engineering
+          <span class="pill" title="GPA">GPA 86.28 / 100</span>
+        </p>
+        <ul>
+          <li><strong>Research area:</strong> design and visual perception study of lower-limb ankle lasso exoskeleton.</li>
+          <li><strong>Honors:</strong> Special Scholarship (2019); First-Class Scholarship (2020).</li>
+          <li><strong>Awards:</strong> 3rd Prize, National Graduate Robotics Contest; Grand Prize, Robot Creativity Contest.</li>
+        </ul>
+      </article>
+
+      <!-- UESTC -->
+      <article class="card pad-top" aria-labelledby="uestc-title">
+        <span class="badge" aria-hidden="true">B.Eng.</span>
+        <span class="badge badge--tr badge--gold" aria-label="Completed">Completed</span>
+
+        <h3 id="uestc-title">University of Electronic Science and Technology of China (UESTC)</h3>
+        <p class="meta">09/2015 — 06/2019 · School of Mechanical Engineering</p>
+        <p class="lead">
+          B.Eng. in Mechanical Engineering
+          <span class="pill" title="GPA">GPA 3.61 / 4.0</span>
+          <span class="pill" title="Ranking">Top 10%</span>
+        </p>
+        <ul>
+          <li><strong>Research area:</strong> system design and key technology of the main transmission of machine tools.</li>
+          <li><strong>Honors:</strong> Outstanding Graduate (2019); People’s Second Scholarship (2017); People’s Third Scholarship (2016).</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</body>
+</html>
