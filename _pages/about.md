@@ -19,6 +19,10 @@ Education
 ======
 {% include education.html %}
 
+Publications
+======
+
+
 
 
 
