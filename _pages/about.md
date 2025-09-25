@@ -23,7 +23,9 @@ Publications
 ======
 {% include publications.html %}
 
-
+Recent News
+======
+{% include news.html %}
 
 
 
