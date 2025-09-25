@@ -1,12 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Education — Badge Cards</title>
+  <title>Education — Two-Row Layout</title>
   <style>
     /* ===== Theme & Base ===== */
     :root {
-      --global-theme-color: #002D72; /* site theme color */
+      --global-theme-color: #002D72;
       --text-color: #111827;
       --muted-color: #6b7280;
       --bg-color: #ffffff;
@@ -25,16 +26,25 @@
     h2, h3 { margin: 0 0 10px; line-height: 1.25; }
     p { margin: 8px 0; }
 
-    /* ===== Grid & Card ===== */
+    /* ===== Grid ===== */
     .grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 16px;
       margin-top: 20px;
     }
+    /* Mobile: stack all */
+    .card { grid-column: span 12; }
+
+    /* >= 840px: PhD spans two columns (full row), others sit side-by-side below */
+    @media (min-width: 840px) {
+      .card { grid-column: span 6; }
+      .card.phd { grid-column: 1 / -1; } /* full width */
+    }
+
+    /* ===== Card ===== */
     .card {
-      grid-column: span 12;
-      position: relative; /* anchor for absolute badges */
+      position: relative;               /* anchor for absolute badges */
       background: var(--bg-color);
       border: 1px solid var(--card-border);
       border-radius: 12px;
@@ -42,8 +52,6 @@
       box-shadow: 0 8px 24px rgba(0,0,0,0.05);
       overflow: hidden;
     }
-    @media (min-width: 840px) { .card { grid-column: span 6; } }
-
     .meta { font-size: 0.95rem; color: var(--muted-color); }
     .lead { margin-top: 6px; font-weight: 500; }
 
@@ -68,7 +76,7 @@
     .badge--gold { background-color: #D4AF37; color: #111; }
     .pad-top { padding-top: 44px; } /* avoid overlapping heading */
 
-    /* Inline badges (pills) */
+    /* Inline pills */
     .pill {
       display: inline-block;
       font-size: 0.78rem;
@@ -77,15 +85,12 @@
       border-radius: 999px;
       background: #eef2ff;
       color: #3730a3;
-      margin-right: 6px;
+      margin-left: 8px;
       vertical-align: middle;
     }
 
-    /* Lists inside cards */
-    ul {
-      margin: 10px 0 0;
-      padding-left: 18px;
-    }
+    /* Lists */
+    ul { margin: 10px 0 0; padding-left: 18px; }
     ul li { margin: 6px 0; }
   </style>
 </head>
@@ -95,8 +100,8 @@
 
     <div class="grid">
 
-      <!-- University of Notre Dame -->
-      <article class="card pad-top" aria-labelledby="nd-title">
+      <!-- Top row: Ph.D. spans two columns -->
+      <article class="card phd pad-top" aria-labelledby="nd-title">
         <span class="badge" aria-hidden="true">Ph.D.</span>
         <span class="badge badge--tr" aria-label="Current">Current</span>
 
@@ -112,7 +117,7 @@
         </ul>
       </article>
 
-      <!-- Xi'an Jiaotong University -->
+      <!-- Second row: two cards side-by-side -->
       <article class="card pad-top" aria-labelledby="xjtu-title">
         <span class="badge" aria-hidden="true">M.Eng.</span>
         <span class="badge badge--tr badge--gold" aria-label="Completed">Completed</span>
@@ -130,7 +135,6 @@
         </ul>
       </article>
 
-      <!-- UESTC -->
       <article class="card pad-top" aria-labelledby="uestc-title">
         <span class="badge" aria-hidden="true">B.Eng.</span>
         <span class="badge badge--tr badge--gold" aria-label="Completed">Completed</span>
