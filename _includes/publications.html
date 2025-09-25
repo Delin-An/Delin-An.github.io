@@ -1,228 +1,222 @@
+<!-- publication.html (scoped styles to avoid conflicts with Awards/Education) -->
 <style>
-.publications {
-  margin-top: 2rem;
+/* ====== Scoped palette for Publications only ====== */
+.cvpubs {
+  --cvpubs-accent: #00DAC0;       /* buttons & badges */
+  --cvpubs-hover:  #00B3A4;       /* hover state */
+  --cvpubs-text:   #0F172A;       /* titles/authors */
+  --cvpubs-dim:    #6B7280;       /* muted text */
 }
 
-.publications ol.bibliography {
+/* ====== Layout ====== */
+.cvpubs { margin-top: 2rem; }
+
+.cvpubs .cvpubs-biblio {
   list-style: none;
   padding: 0;
   margin-top: 0;
 }
 
-.publications ol.bibliography li {
+.cvpubs .cvpubs-biblio > li {
   margin-bottom: 2rem;
   min-height: 140px;
 }
 
-.pub-row {
+.cvpubs .cvpubs-row {
   display: flex;
   align-items: flex-start;
   margin-bottom: 0.5rem;
 }
 
-.col-sm-3.abbr {
+/* left column (image + badge) */
+.cvpubs .cvpubs-left {
   position: relative;
   flex: 0 0 280px;
-  margin-right: 0.1em;  /* smaller margin */
-  height: 140px;
+  margin-right: 0.75rem;
+  height: auto;
   margin-bottom: 0.5rem;
 }
 
-.teaser {
-  border-radius: 2px;
-  box-shadow: 0px 0px 0px #888;
-  height: 200px;
-  width: 250px;
-  object-fit: fill;
+/* teaser image — natural ratio */
+.cvpubs .cvpubs-teaser {
+  width: 100%;
+  height: auto;              /* keep natural aspect ratio */
+  aspect-ratio: 5 / 4;       /* stable box height without distortion */
+  object-fit: contain;       /* show full image; no stretching */
+  background: #fff;          /* letterbox background if needed */
+  border-radius: 6px;
+  box-shadow: 0 0 0 transparent;
   margin: 0;
 }
 
-.badge {
+/* conference badge (top-left) */
+.cvpubs .cvpubs-badge {
   display: inline-block;
-  background-color: var(--global-theme-color, #002D72);
-  color: white !important;
-  padding: 0.3em 1.2em;  /* bigger padding */
+  background-color: var(--cvpubs-accent);
+  color: #fff !important;
+  padding: 0.3em 1.2em;
   position: absolute;
-  top: 0px;  
-  left: 0px;  
-  border-radius: 0.25rem;  
+  top: 0;
+  left: 0;
+  border-radius: 0.25rem;
   font-size: 0.75em;
   font-weight: 700;
   text-transform: uppercase;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-  min-width: 70px; 
+  box-shadow: 0 2px 5px rgb(0 0 0 / 16%), 0 2px 10px rgb(0 0 0 / 12%);
+  min-width: 70px;
   text-align: center;
-  z-index: 10;  
+  z-index: 10;
 }
 
-.col-sm-9 {
+/* right column */
+.cvpubs .cvpubs-right {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.title {
-  font-weight: bolder;
-  font-size: 1.05em;  
+/* ====== Typography (stronger) ====== */
+.cvpubs .cvpubs-title {
+  font-weight: 800;
+  font-size: 1.15em;
   margin-bottom: 0.5em;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
-.title a {
-  color: var(--global-text-color, #000000);
+.cvpubs .cvpubs-title a {
+  color: var(--cvpubs-text) !important;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
-
-.title a:hover {
-  color: var(--global-theme-color, #002D72);
-  border-bottom: 1px solid var(--global-theme-color, #002D72);
+.cvpubs .cvpubs-title a:hover {
+  color: var(--cvpubs-hover) !important;
+  border-bottom: 1px solid var(--cvpubs-hover);
   text-decoration: none;
 }
 
-.author {
+.cvpubs .cvpubs-author {
   margin-bottom: 0.3em;
-  font-size: 1.05em;  
-  color: var(--global-text-color, #000000);
+  font-size: 1.02em;
+  color: var(--cvpubs-text) !important;
 }
-
-.author > em {
+.cvpubs .cvpubs-author > em {
   border-bottom: 1px solid;
   font-style: normal;
 }
-
-.author a {
-  border-bottom: 1px solid var(--global-theme-color, #002D72);
+.cvpubs .cvpubs-author a {
+  border-bottom: 1px solid var(--cvpubs-accent);
   text-decoration: none;
 }
-
-.author a:hover {
+.cvpubs .cvpubs-author a:hover {
   border-bottom-style: solid;
   text-decoration: none;
 }
 
-.periodical {
+.cvpubs .cvpubs-periodical {
   margin-bottom: 1em;
-  font-size: 1.0em;  
-  color: var(--global-text-color-light, #828282);
+  font-size: 1.0em;
+  color: var(--cvpubs-dim);
   font-style: italic;
 }
 
-.links {
+/* ====== Buttons (scoped) ====== */
+.cvpubs .cvpubs-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
 }
 
-.links a.btn {
-  color: white;
-  background-color: var(--global-theme-color, #002D72);
-  border: 1px solid var(--global-theme-color, #002D72);
+.cvpubs .cvpubs-btn {
+  color: #ffffff;
+  background-color: var(--cvpubs-accent);
+  border: 1px solid var(--cvpubs-accent);
   padding: 0.2rem 0.8rem;
   font-size: 0.85em;
-  font-weight: 500;
-  border-radius: 20px;  
+  font-weight: 600;
+  border-radius: 20px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   display: inline-block;
   margin-right: 0.4em;
   margin-bottom: 0.3em;
 }
-
-.links a.btn:hover {
-  background-color: var(--global-hover-color, #ffb81c);
-  border-color: var(--global-hover-color, #ffb81c);
-  color: #000000;
-  text-decoration: none;
+.cvpubs .cvpubs-btn:hover {
+  background-color: var(--cvpubs-hover);
+  border-color: var(--cvpubs-hover);
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.18);
 }
 
-.links i {
-  color: var(--global-theme-color, #002D72) !important;
+.cvpubs .cvpubs-links i {
+  color: var(--cvpubs-accent) !important;
   font-style: italic;
   font-weight: bold;
 }
 
-
+/* ====== Responsive ====== */
 @media (max-width: 768px) {
-  .pub-row {
-    flex-direction: column;
-  }
-  
-  .col-sm-3.abbr {
+  .cvpubs .cvpubs-row { flex-direction: column; }
+  .cvpubs .cvpubs-left {
     flex: none;
     margin-right: 0;
     margin-bottom: 1em;
     width: 100%;
     height: auto;
   }
-  
-  .teaser {
+  .cvpubs .cvpubs-teaser {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 100%;
   }
-}
-
-
-:root {
-  --global-theme-color: #002D72;
-  --global-text-color: #000000;
-  --global-text-color-light: #828282;
-  --global-hover-color: #ffb81c;
 }
 </style>
 
-<p style="font-size: 0.85em; color: #666; font-style: italic; margin-bottom: 2em; margin-top: 0.5em;">
-  Star * indicates equal contribution，<u>underline</u> denotes supervised undergrad student
+<p class="cvpubs-note" style="font-size: 0.85em; color: #666; font-style: italic; margin-bottom: 2em; margin-top: 0.5em;">
+  Star * indicates equal contribution, <u>underline</u> denotes supervised undergrad student
 </p>
 
-<div class="publications">
-<ol class="bibliography">
-
-{% for link in site.data.publications.main %}
-
-<li>
-<div class="pub-row">
-  <div class="col-sm-3 abbr">
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" alt="{{ link.title }}">
-    <abbr class="badge">{{ link.conference_short }}</abbr>
-  </div>
-  <div class="col-sm-9">
-      <div class="title"><a href="{{ link.pdf }}" target="_blank">{{ link.title }}</a></div>
-      <div class="author">{{ link.authors }}</div>
-      <div class="periodical"><em>{{ link.conference }}</em></div>
-    <div class="links">
-      {% if link.pdf %} 
-      <a href="{{ link.pdf }}" class="btn" role="button" target="_blank">PDF</a>
-      {% endif %}
-      {% if link.code %} 
-      <a href="{{ link.code }}" class="btn" role="button" target="_blank">Code</a>
-      {% endif %}
-      {% if link.page %} 
-      <a href="{{ link.page }}" class="btn" role="button" target="_blank">Project Page</a>
-      {% endif %}
-      {% if link.data %} 
-      <a href="{{ link.data }}" class="btn" role="button" target="_blank">Dataset</a>
-      {% endif %}
-      {% if link.bibtex %} 
-      <a href="{{ link.bibtex }}" class="btn" role="button" target="_blank">BibTex</a>
-      {% endif %}
-      {% if link.notes %} 
-      <strong> <i>{{ link.notes }}</i></strong>
-      {% endif %}
-      {% if link.others %} 
-      {{ link.others }}
-      {% endif %}
-    </div>
-  </div>
-</div>
-</li>
-
-{% endfor %}
-
-</ol>
+<div class="cvpubs">
+  <ol class="cvpubs-biblio">
+  {% for link in site.data.publications.main %}
+    <li>
+      <div class="cvpubs-row">
+        <div class="cvpubs-left">
+          <img src="{{ link.image }}" class="cvpubs-teaser" alt="{{ link.title }}">
+          <abbr class="cvpubs-badge">{{ link.conference_short }}</abbr>
+        </div>
+        <div class="cvpubs-right">
+          <div class="cvpubs-title"><a href="{{ link.pdf }}" target="_blank">{{ link.title }}</a></div>
+          <div class="cvpubs-author">{{ link.authors }}</div>
+          <div class="cvpubs-periodical"><em>{{ link.conference }}</em></div>
+          <div class="cvpubs-links">
+            {% if link.pdf %}
+              <a href="{{ link.pdf }}" class="cvpubs-btn" role="button" target="_blank">PDF</a>
+            {% endif %}
+            {% if link.code %}
+              <a href="{{ link.code }}" class="cvpubs-btn" role="button" target="_blank">Code</a>
+            {% endif %}
+            {% if link.page %}
+              <a href="{{ link.page }}" class="cvpubs-btn" role="button" target="_blank">Project Page</a>
+            {% endif %}
+            {% if link.data %}
+              <a href="{{ link.data }}" class="cvpubs-btn" role="button" target="_blank">Dataset</a>
+            {% endif %}
+            {% if link.bibtex %}
+              <a href="{{ link.bibtex }}" class="cvpubs-btn" role="button" target="_blank">BibTex</a>
+            {% endif %}
+            {% if link.notes %}
+              <strong><i>{{ link.notes }}</i></strong>
+            {% endif %}
+            {% if link.others %}
+              {{ link.others }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+  </ol>
 </div>
