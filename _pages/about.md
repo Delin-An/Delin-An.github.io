@@ -21,6 +21,7 @@ Education
 
 Publications
 ======
+{% include publications.html %}
 
 
 
