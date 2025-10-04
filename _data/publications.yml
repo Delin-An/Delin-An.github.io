@@ -42,7 +42,7 @@ main:
     authors: Xian Yue, Aibin Zhu, Peifeng Ma, <strong>Delin An</strong>, Diyang Dang, Yulin Zhang
     conference_short: ICARM
     conference: IEEE International Conference on Advanced Robotics and Mechatronics <strong>(ICARM)</strong>, 2022.
-    pdf: https://ieeexplore.ieee.org/abstract/document/10943895
+    pdf: https://ieeexplore.ieee.org/document/9959156
     image: /images/pubs/DMP.png
 
   - title: "Environmental obstacle detection and localization model for cable-driven exoskeleton"
