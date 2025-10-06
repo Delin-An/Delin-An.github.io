@@ -29,6 +29,6 @@ Recent News
 
 Funding & Support
 ======
-> Supported by the `SAI Graduate Fellowship Pilot` (University of Notre Dame). I am grateful to Prof. [**Emily Johnson**](https://engineering.nd.edu/faculty/emily-johnson/) and [**Donald Brower**](https://research.nd.edu/people/donald-brower/) for mentorship through SAI and for their guidance and encouragement during the writing of *AortaDiff*. I also thank Prof. [**Jian-Xun Wang**](https://www.engineering.cornell.edu/people/jian-xun-wang/) (Cornell University) for generous collaboration across our joint projects, and Prof. [**Danny Chen**](https://engineering.nd.edu/faculty/danny-chen/) for guidance on Sli2Vol+.
+> Supported by the `SAI Graduate Fellowship Pilot` (University of Notre Dame). I am grateful to Prof. [**Emily Johnson**](https://engineering.nd.edu/faculty/emily-johnson/) and [**Don Brower**](https://research.nd.edu/people/donald-brower/) for mentorship through SAI and for their guidance and encouragement during the writing of *AortaDiff*. I also thank Prof. [**Jian-Xun Wang**](https://www.engineering.cornell.edu/people/jian-xun-wang/) (Cornell University) for generous collaboration across our joint projects, and Prof. [**Danny Chen**](https://engineering.nd.edu/faculty/danny-chen/) for guidance on Sli2Vol+.
 
 
