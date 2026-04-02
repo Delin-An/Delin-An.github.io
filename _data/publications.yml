@@ -36,6 +36,7 @@ main:
     pdf: https://ieeexplore.ieee.org/abstract/document/10980947
     image: /images/pubs/LoGBNet.png
     code: https://github.com/adlsn/LoGBNet
+    notes: "🏆 Selected as Oral Presentation"
 
   - title: "Sli2Vol+: Segmenting 3D medical images based on an object estimation guided correspondence flow network"
     authors: <strong>Delin An</strong>, Pengfei Gu, Milan Sonka, Chaoli Wang, Danny Z Chen
