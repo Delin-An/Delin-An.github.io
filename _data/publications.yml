@@ -2,7 +2,7 @@ main:
   - title: "Sketch2CT: Multimodal Diffusion for Structure-Aware 3D Medical Volume Generation"
     authors: <strong>Delin An</strong>, Chaoli Wang
     conference_short: CVPR 2026
-    conference: IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2026.
+    conference: IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026.
     pdf: https://arxiv.org/abs/2603.22509
     image: /images/pubs/Sketch2CT.png
   
