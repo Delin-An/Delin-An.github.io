@@ -1,4 +1,6 @@
 main:
+  - date: 2026.03
+    content: Successfully defended my Ph.D. dissertation.
   - date: 2026.02
     content: 'Our CVPR 2026 paper "Sketch2CT: Multimodal Diffusion for Structure-Aware 3D Medical Volume Generation" has been accepted.'
   - date: 2025.08
