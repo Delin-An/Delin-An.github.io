@@ -1,4 +1,11 @@
 main:
+  - title: "Sketch2CT: Multimodal Diffusion for Structure-Aware 3D Medical Volume Generation"
+    authors: <strong>Delin An</strong>, Chaoli Wang
+    conference_short: CVPR 2026
+    conference: IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2026.
+    pdf: https://arxiv.org/abs/2603.22509
+    image: /images/pubs/Sketch2CT.png
+  
   - title: "AortaDiff: Volume-Guided Conditional Diffusion Models for Multi-Branch Aortic Surface Generation"
     authors: <strong>Delin An</strong>, Pan Du, Jian-Xun Wang, Chaoli Wang
     conference_short: VIS 25
