@@ -1,6 +1,6 @@
 main:
   - date: 2026.02
-    content: Our CVPR 2026 paper "Sketch2CT: Multimodal Diffusion for Structure-Aware 3D Medical Volume Generation" has been accepted.
+    content: 'Our CVPR 2026 paper "Sketch2CT: Multimodal Diffusion for Structure-Aware 3D Medical Volume Generation" has been accepted.'
   - date: 2025.08
     content: Our Science Advances paper "AI-powered automated model construction for patient-specific CFD simulations of aortic flows" has been published.
   - date: 2025.07
