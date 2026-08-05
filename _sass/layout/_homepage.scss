@@ -1170,12 +1170,12 @@
     }
 
     &__copy {
-      grid-template-columns: 1fr;
-      gap: 1.7rem;
+      grid-template-columns: 132px minmax(0, 1fr);
+      gap: 1.5rem;
     }
 
     h1 {
-      font-size: clamp(4.2rem, 22vw, 6rem);
+      font-size: clamp(3.8rem, 10vw, 5rem);
     }
   }
 
@@ -1184,17 +1184,16 @@
   }
 
   .home-portrait {
-    width: 138px;
+    width: 132px;
     justify-self: start;
   }
 
-  .home-profile-links,
   .home-honors-grid {
     grid-template-columns: 1fr;
   }
 
   .home-profile-links {
-    max-width: 420px;
+    max-width: none;
   }
 
   .home-honor {
@@ -1247,6 +1246,18 @@
 }
 
 @media (max-width: 420px) {
+  .home-hero__copy {
+    grid-template-columns: 1fr;
+  }
+
+  .home-portrait {
+    display: none;
+  }
+
+  .home-profile-links {
+    grid-template-columns: 1fr;
+  }
+
   .home-actions {
     flex-direction: column;
 
