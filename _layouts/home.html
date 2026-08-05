@@ -25,7 +25,7 @@ layout: compress
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
           <a href="#experience">Experience</a>
-          <a href="#news">News</a>
+          <a href="#honors">Honors</a>
           <a class="home-nav__cv" href="{{ base_path }}/files/Delin-An_CV.pdf">CV <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
@@ -47,21 +47,35 @@ layout: compress
               <a class="home-button home-button--secondary" href="mailto:da568@cornell.edu">Get in touch <span aria-hidden="true">↗</span></a>
             </div>
 
-            <div class="home-socials" aria-label="Academic and social profiles">
-              <a href="https://scholar.google.com/citations?user=BkzfjeEAAAAJ&amp;hl=en">Google Scholar</a>
-              <a href="https://orcid.org/0000-0002-7945-0201">ORCID</a>
-              <a href="https://github.com/adlsn">GitHub</a>
+            <div class="home-profiles" aria-labelledby="profile-links-title">
+              <p class="home-profiles__label" id="profile-links-title">Academic profiles</p>
+              <div class="home-profile-links">
+                <a class="home-profile-link" href="https://scholar.google.com/citations?user=BkzfjeEAAAAJ&amp;hl=en">
+                  <span class="home-profile-link__mark" aria-hidden="true">GS</span>
+                  <span><strong>Google Scholar</strong><small>Publications &amp; citations</small></span>
+                  <span class="home-profile-link__arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="home-profile-link" href="https://orcid.org/0000-0002-7945-0201">
+                  <span class="home-profile-link__mark home-profile-link__mark--orcid" aria-hidden="true">iD</span>
+                  <span><strong>ORCID</strong><small>0000-0002-7945-0201</small></span>
+                  <span class="home-profile-link__arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="home-profile-link" href="https://github.com/adlsn">
+                  <span class="home-profile-link__mark home-profile-link__mark--github" aria-hidden="true">GH</span>
+                  <span><strong>GitHub</strong><small>Code &amp; projects</small></span>
+                  <span class="home-profile-link__arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
           </div>
 
           <div class="home-portrait" aria-label="Portrait of Delin An">
             <div class="home-portrait__frame">
-              <span class="home-portrait__index" aria-hidden="true">01 / PROFILE</span>
-              <img src="{{ base_path }}/images/profile.webp" alt="Delin An" width="900" height="1035" fetchpriority="high">
+              <img src="{{ base_path }}/images/delin-an.png" alt="Delin An" width="480" height="480" fetchpriority="high">
             </div>
             <div class="home-portrait__note">
               <span class="home-status-dot" aria-hidden="true"></span>
-              <span><strong>Cornell University</strong><br>Ithaca, New York</span>
+              <span><strong>Postdoctoral Researcher</strong><br>Cornell University · Ithaca, NY</span>
             </div>
           </div>
         </div>
@@ -187,6 +201,47 @@ layout: compress
               </div>
             </li>
           </ol>
+        </div>
+      </section>
+
+      <section class="home-section home-honors" id="honors" aria-labelledby="honors-title">
+        <div class="home-shell">
+          <div class="home-section__heading">
+            <div>
+              <p class="home-kicker">Recognition</p>
+              <h2 id="honors-title">Honors, awards<br>&amp; fellowships.</h2>
+            </div>
+            <p class="home-section__lede">
+              Recognition spanning scientific AI, graduate research, robotics, and academic excellence.
+            </p>
+          </div>
+
+          <div class="home-honors-grid">
+            <article class="home-honor home-honor--featured">
+              <div class="home-honor__meta"><span>Fellowship</span><time>2025</time></div>
+              <h3>SAI Graduate Fellowship Pilot</h3>
+              <p>Inaugural fellow and the first and only recipient selected from Notre Dame's Department of Computer Science &amp; Engineering.</p>
+              <div class="home-honor__institution">University of Notre Dame</div>
+            </article>
+            <article class="home-honor">
+              <div class="home-honor__meta"><span>Award</span><time>2025</time></div>
+              <h3>Graduate Professional Development Award</h3>
+              <p>Competitive support for graduate research, professional training, and scholarly development.</p>
+              <div class="home-honor__institution">University of Notre Dame</div>
+            </article>
+            <article class="home-honor">
+              <div class="home-honor__meta"><span>Competition</span><time>Graduate study</time></div>
+              <h3>National Robotics Honors</h3>
+              <p>Third Prize in the National Graduate Robotics Contest and Grand Prize in the Robot Creativity Contest.</p>
+              <div class="home-honor__institution">Xi'an Jiaotong University</div>
+            </article>
+            <article class="home-honor">
+              <div class="home-honor__meta"><span>Academic honors</span><time>2016–2020</time></div>
+              <h3>Scholarships &amp; Outstanding Graduate</h3>
+              <p>Special Scholarship, First-Class Scholarship, People's Scholarships, and Outstanding Graduate recognition.</p>
+              <div class="home-honor__institution">XJTU · UESTC</div>
+            </article>
+          </div>
         </div>
       </section>
 
