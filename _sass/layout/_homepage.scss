@@ -180,29 +180,25 @@
     mask-image: linear-gradient(to left, #000, transparent 72%);
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(50% + 190px);
-    width: 1px;
-    background: rgba(49, 91, 125, 0.1);
-  }
-
   &__grid {
     position: relative;
     z-index: 2;
-    display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.55fr);
-    align-items: center;
-    gap: clamp(3rem, 7vw, 6rem);
     min-height: 590px;
     padding-bottom: 3.8rem;
   }
 
   &__copy {
-    max-width: 760px;
+    display: grid;
+    grid-template-columns: 196px minmax(0, 760px);
+    align-items: start;
+    justify-content: center;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    width: 100%;
+    max-width: none;
+  }
+
+  &__content {
+    min-width: 0;
   }
 
   h1 {
@@ -446,9 +442,10 @@
 
 .home-portrait {
   position: relative;
-  width: min(100%, 274px);
-  max-width: 274px;
-  justify-self: end;
+  width: min(100%, 196px);
+  max-width: 196px;
+  margin-top: 0.1rem;
+  justify-self: start;
 
   &__frame {
     position: relative;
@@ -1092,9 +1089,9 @@
 
 @media (max-width: 920px) {
   .home-hero {
-    &__grid {
-      grid-template-columns: minmax(0, 1fr) 270px;
-      gap: 2.5rem;
+    &__copy {
+      grid-template-columns: 158px minmax(0, 1fr);
+      gap: 2.2rem;
     }
 
     h1 {
@@ -1168,14 +1165,13 @@
   .home-hero {
     padding-top: 7.2rem;
 
-    &::after {
-      display: none;
+    &__grid {
+      padding-bottom: 3.5rem;
     }
 
-    &__grid {
+    &__copy {
       grid-template-columns: 1fr;
-      gap: 3.2rem;
-      padding-bottom: 3.5rem;
+      gap: 1.7rem;
     }
 
     h1 {
@@ -1188,8 +1184,8 @@
   }
 
   .home-portrait {
-    width: min(76%, 274px);
-    justify-self: center;
+    width: 138px;
+    justify-self: start;
   }
 
   .home-profile-links,
