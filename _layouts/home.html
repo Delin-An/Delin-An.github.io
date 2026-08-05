@@ -1,0 +1,230 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="research-home">
+    <a class="home-skip" href="#main-content">Skip to content</a>
+
+    <header class="home-nav" aria-label="Primary navigation">
+      <div class="home-shell home-nav__inner">
+        <a class="home-brand" href="{{ base_path }}/" aria-label="Delin An, home">
+          <span class="home-brand__mark" aria-hidden="true">DA</span>
+          <span class="home-brand__text">Delin An</span>
+        </a>
+
+        <nav class="home-nav__links" aria-label="Main menu">
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#news">News</a>
+          <a class="home-nav__cv" href="{{ base_path }}/files/Delin-An_CV.pdf">CV <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="home-hero" id="about" aria-labelledby="hero-title">
+        <div class="home-shell home-hero__grid">
+          <div class="home-hero__copy">
+            <p class="home-eyebrow"><span></span> Scientific AI · Generative Modeling · 3D Vision</p>
+            <h1 id="hero-title">Delin <em>An</em></h1>
+            <p class="home-hero__role">Postdoctoral Researcher at <a href="https://www.cornell.edu/">Cornell University</a></p>
+            <p class="home-hero__intro">
+              I develop data-efficient, geometry-aware AI that turns sparse observations into reliable 3D representations—connecting medical imaging, scientific computing, and embodied perception.
+            </p>
+
+            <div class="home-actions" aria-label="Profile links">
+              <a class="home-button home-button--primary" href="#publications">Explore my research <span aria-hidden="true">↓</span></a>
+              <a class="home-button home-button--secondary" href="mailto:da568@cornell.edu">Get in touch <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="home-socials" aria-label="Academic and social profiles">
+              <a href="https://scholar.google.com/citations?user=BkzfjeEAAAAJ&amp;hl=en">Google Scholar</a>
+              <a href="https://orcid.org/0000-0002-7945-0201">ORCID</a>
+              <a href="https://github.com/adlsn">GitHub</a>
+            </div>
+          </div>
+
+          <div class="home-portrait" aria-label="Portrait of Delin An">
+            <div class="home-portrait__frame">
+              <span class="home-portrait__index" aria-hidden="true">01 / PROFILE</span>
+              <img src="{{ base_path }}/images/profile.webp" alt="Delin An" width="900" height="1035" fetchpriority="high">
+            </div>
+            <div class="home-portrait__note">
+              <span class="home-status-dot" aria-hidden="true"></span>
+              <span><strong>Cornell University</strong><br>Ithaca, New York</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-shell home-metrics" aria-label="Research highlights">
+          <div><strong>9</strong><span>Peer-reviewed<br>publications</span></div>
+          <div><strong>7</strong><span>First / co-first<br>author papers</span></div>
+          <div><strong>4</strong><span>3D CT / MRI<br>benchmarks</span></div>
+          <div><strong>2026</strong><span>CVPR paper<br>first author</span></div>
+        </div>
+      </section>
+
+      <section class="home-section home-research" id="research" aria-labelledby="research-title">
+        <div class="home-shell">
+          <div class="home-section__heading">
+            <div>
+              <p class="home-kicker">Research agenda</p>
+              <h2 id="research-title">From sparse signals<br>to useful worlds.</h2>
+            </div>
+            <p class="home-section__lede">
+              My work couples images, masks, and geometry so AI systems can reason about structure—not just appearance. I focus on methods that remain controllable, uncertainty-aware, and useful beyond the benchmark.
+            </p>
+          </div>
+
+          <div class="home-pillars">
+            <article class="home-pillar">
+              <span class="home-pillar__number">01</span>
+              <h3>Generative Medical Intelligence</h3>
+              <p>Multimodal diffusion models that transform sketches, text, and limited annotations into coherent 3D CT/MRI volumes and anatomical masks.</p>
+              <div class="home-pillar__tags"><span>3D diffusion</span><span>Multimodal learning</span></div>
+            </article>
+            <article class="home-pillar">
+              <span class="home-pillar__number">02</span>
+              <h3>Geometry &amp; Scientific Computing</h3>
+              <p>Geometry-aware learning for surface reconstruction, simulation-ready modeling, and interpretable analysis of complex scientific structures.</p>
+              <div class="home-pillar__tags"><span>Geometric learning</span><span>Scientific AI</span></div>
+            </article>
+            <article class="home-pillar">
+              <span class="home-pillar__number">03</span>
+              <h3>Embodied Perception</h3>
+              <p>Perception-to-control systems that connect visual intelligence with wearable robotics, adaptive locomotion, and real physical interaction.</p>
+              <div class="home-pillar__tags"><span>Robotics</span><span>Physical systems</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-publications" id="publications" aria-labelledby="publications-title">
+        <div class="home-shell">
+          <div class="home-section__heading home-section__heading--compact">
+            <div>
+              <p class="home-kicker">Selected work</p>
+              <h2 id="publications-title">Research with<br>real geometry.</h2>
+            </div>
+            <a class="home-text-link" href="https://scholar.google.com/citations?user=BkzfjeEAAAAJ&amp;hl=en">View Google Scholar <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="home-paper-list">
+            {% for paper in site.data.publications.main limit:6 %}
+            <article class="home-paper">
+              <a class="home-paper__image" href="{{ paper.pdf }}" aria-label="Read {{ paper.title }}">
+                <img src="{{ base_path }}{{ paper.image }}" alt="Visual abstract for {{ paper.title }}" loading="lazy">
+                <span>{{ paper.conference_short }}</span>
+              </a>
+              <div class="home-paper__body">
+                <div class="home-paper__meta">{{ paper.conference }}</div>
+                <h3><a href="{{ paper.pdf }}">{{ paper.title }}</a></h3>
+                <p class="home-paper__authors">{{ paper.authors }}</p>
+                {% if paper.summary %}<p class="home-paper__summary">{{ paper.summary }}</p>{% endif %}
+                <div class="home-paper__links">
+                  {% if paper.pdf %}<a href="{{ paper.pdf }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}
+                  {% if paper.code %}<a href="{{ paper.code }}">Code <span aria-hidden="true">↗</span></a>{% endif %}
+                  {% if paper.page %}<a href="{{ paper.page }}">Project <span aria-hidden="true">↗</span></a>{% endif %}
+                  {% if paper.notes %}<span>{{ paper.notes }}</span>{% endif %}
+                </div>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-experience" id="experience" aria-labelledby="experience-title">
+        <div class="home-shell home-experience__grid">
+          <div class="home-experience__intro">
+            <p class="home-kicker">Academic path</p>
+            <h2 id="experience-title">Engineering roots.<br>Scientific AI future.</h2>
+            <p>My path from mechanical engineering and wearable robotics to computer science shapes how I build AI: grounded in geometry, physical systems, and deployable outcomes.</p>
+            <a class="home-button home-button--dark" href="{{ base_path }}/files/Delin-An_CV.pdf">Download full CV <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <ol class="home-timeline">
+            <li class="home-timeline__item home-timeline__item--current">
+              <div class="home-timeline__year">2026 — Present</div>
+              <div>
+                <p class="home-timeline__type">Academic appointment</p>
+                <h3>Cornell University</h3>
+                <p>Postdoctoral Researcher · Scientific machine learning and generative modeling</p>
+              </div>
+            </li>
+            <li class="home-timeline__item">
+              <div class="home-timeline__year">2022 — 2026</div>
+              <div>
+                <p class="home-timeline__type">Doctoral education</p>
+                <h3>University of Notre Dame</h3>
+                <p>Ph.D. in Computer Science and Engineering · GPA 3.8 / 4.0</p>
+              </div>
+            </li>
+            <li class="home-timeline__item">
+              <div class="home-timeline__year">2019 — 2022</div>
+              <div>
+                <p class="home-timeline__type">Graduate education</p>
+                <h3>Xi’an Jiaotong University</h3>
+                <p>M.Eng. in Mechanical Engineering · Robotics and perception</p>
+              </div>
+            </li>
+            <li class="home-timeline__item">
+              <div class="home-timeline__year">2015 — 2019</div>
+              <div>
+                <p class="home-timeline__type">Undergraduate education</p>
+                <h3>UESTC</h3>
+                <p>B.Eng. in Mechanical Engineering · Top 10%</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="home-section home-updates" id="news" aria-labelledby="news-title">
+        <div class="home-shell home-updates__grid">
+          <div>
+            <p class="home-kicker">Now &amp; next</p>
+            <h2 id="news-title">Recent updates.</h2>
+          </div>
+          <div class="home-news-list">
+            {% for item in site.data.news.main limit:6 %}
+            <article class="home-news-item">
+              <time>{{ item.date }}</time>
+              <p>{{ item.content }}</p>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="home-contact" id="contact" aria-labelledby="contact-title">
+        <div class="home-shell home-contact__inner">
+          <p class="home-kicker">Collaborate</p>
+          <h2 id="contact-title">Let’s build AI that<br><em>understands structure.</em></h2>
+          <p>I am open to conversations around scientific AI, generative modeling, 3D medical imaging, and embodied intelligence.</p>
+          <a href="mailto:da568@cornell.edu">da568@cornell.edu <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="home-footer">
+      <div class="home-shell home-footer__inner">
+        <p>© {{ site.time | date: '%Y' }} Delin An</p>
+        <p>Postdoctoral Researcher · Cornell University · Ithaca, NY</p>
+        <a href="#main-content">Back to top ↑</a>
+      </div>
+    </footer>
+
+    {% include scripts.html %}
+  </body>
+</html>

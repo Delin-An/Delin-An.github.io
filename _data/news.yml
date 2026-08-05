@@ -1,18 +1,20 @@
 main:
+  - date: 2026
+    content: Joined Cornell University as a Postdoctoral Researcher, working on scientific machine learning and generative modeling.
   - date: 2026.03
-    content: "🎓 Successfully defended my Ph.D. dissertation."
+    content: Successfully defended my Ph.D. dissertation at the University of Notre Dame.
   - date: 2026.02
-    content: 'Our CVPR 2026 paper "Sketch2CT: Multimodal Diffusion for Structure-Aware 3D Medical Volume Generation" has been accepted.'
+    content: 'Sketch2CT: Multimodal Diffusion for Structure-Aware 3D Medical Volume Generation was accepted to CVPR 2026.'
   - date: 2025.08
-    content: Our Science Advances paper "AI-powered automated model construction for patient-specific CFD simulations of aortic flows" has been published.
+    content: Our patient-specific aortic modeling work was published in Science Advances.
   - date: 2025.07
-    content: AortaDiff is accepted to IEEE VIS 2025!
+    content: AortaDiff was accepted to IEEE VIS 2025 and IEEE TVCG.
   - date: 2025.06
-    content: SurfPatch appears in IEEE TVCG (PacificVis 2025 issue).
+    content: SurfPatch appeared in IEEE TVCG as part of the PacificVis 2025 issue.
   - date: 2025.04
-    content: Presented LoGB-Net at IEEE ISBI 2025 (Houston; Apr 14–17).
+    content: Presented LoGB-Net as an oral paper at IEEE ISBI 2025 in Houston.
   - date: 2025.02
-    content: Sli2Vol+ appears in the WACV 2025 proceedings.
+    content: Sli2Vol+ appeared in the WACV 2025 proceedings.
   - date: 2025.01
     content: Received the Graduate Professional Development Award from the University of Notre Dame.
   - date: 2024.12

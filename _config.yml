@@ -9,11 +9,11 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "air" # Currently available options are "default", "air"
-title                    : "Delin An / HomePage"
+title                    : "Delin An"
 title_separator          : "-"
 name                     : "Delin An"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://Delin-An.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+description              : &description "Delin An is a Cornell University postdoctoral researcher in scientific AI, generative modeling, 3D computer vision, and medical imaging."
+url                      : https://delin-an.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Delin-An/Delin-An.github.io"
@@ -23,14 +23,14 @@ repository               : "Delin-An/Delin-An.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/profile.png"
+  avatar           : "profile.webp"
   name             : "Delin An"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. at University of Notre Dame"
-  location         : "US - Notre Dame"
-  employer         : "University of Notre Dame"
-  uri              : # URL
-  email            : "dan3@nd.edu" 
+  bio              : "Postdoctoral Researcher in Scientific AI and Generative Modeling"
+  location         : "Ithaca, New York"
+  employer         : "Cornell University"
+  uri              : "https://delin-an.github.io"
+  email            : "da568@cornell.edu"
 
   # Academic websites
   academia         : # URL
@@ -38,7 +38,7 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=BkzfjeEAAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "http://orcid.org/0000-0002-7945-0201"
+  orcid            : "https://orcid.org/0000-0002-7945-0201"
   semantic         : # URL
   # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
@@ -48,7 +48,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "adlsn/adlsn"
+  github           : "adlsn"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -92,7 +92,7 @@ publication_category:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
@@ -140,14 +140,18 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "og-card.png"
+og_description           : "Delin An — Cornell postdoctoral researcher in scientific AI, generative modeling, 3D computer vision, and medical imaging."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Delin An"
+  links:
+    - "https://scholar.google.com/citations?user=BkzfjeEAAAAJ&hl=en"
+    - "https://orcid.org/0000-0002-7945-0201"
+    - "https://github.com/adlsn"
+    - "https://www.cornell.edu/"
 
 
 # Analytics
@@ -219,16 +223,16 @@ kramdown:
 # These settings control the types of collections used by the template
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
-    output: true
+    output: false
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 
@@ -252,6 +256,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      published: false
   # _teaching
   - scope:
       path: ""

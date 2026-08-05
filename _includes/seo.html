@@ -6,7 +6,11 @@
 {% endif %}
 {% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
+{% if page.seo_title %}
+  {% assign seo_title = page.seo_title %}
+{% elsif page.url == "/" %}
+  {% assign seo_title = page.title %}
+{% elsif page.title %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
 {% endif %}
 
@@ -25,6 +29,7 @@
   {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
 {% endif %}
 <meta name="description" content="{{ seo_description }}">
+<meta name="author" content="{{ site.name }}">
 
 {% assign seo_author = page.author | default: page.author[0] | default: site.author[0] %}
 {% if seo_author %}
@@ -69,6 +74,16 @@
   {% endif %}
 {% endif %}
 
+{% unless site.twitter.username %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+  <meta name="twitter:description" content="{{ seo_description }}">
+  {% if site.og_image %}
+    <meta name="twitter:image" content="{{ site.og_image | prepend: "/images/" | prepend: seo_url }}">
+    <meta name="twitter:image:alt" content="Delin An — Scientific AI, Generative Modeling, and 3D Vision">
+  {% endif %}
+{% endunless %}
+
 {% if site.facebook %}
   {% if site.facebook.publisher %}
     <meta property="article:publisher" content="{{ site.facebook.publisher }}">
@@ -89,11 +104,35 @@
 {% if site.social %}
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
-      "url" : {{ seo_url | jsonify }},
-      "sameAs" : {{ site.social.links | jsonify }}
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": {{ seo_url | append: "/#person" | jsonify }},
+      "name": "Delin An",
+      "givenName": "Delin",
+      "familyName": "An",
+      "url": {{ seo_url | jsonify }},
+      "image": {{ seo_url | append: "/images/profile.webp" | jsonify }},
+      "email": "mailto:da568@cornell.edu",
+      "jobTitle": "Postdoctoral Researcher",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Cornell University",
+        "url": "https://www.cornell.edu/"
+      },
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "University of Notre Dame"},
+        {"@type": "CollegeOrUniversity", "name": "Xi'an Jiaotong University"},
+        {"@type": "CollegeOrUniversity", "name": "University of Electronic Science and Technology of China"}
+      ],
+      "knowsAbout": [
+        "Scientific machine learning",
+        "Generative modeling",
+        "3D computer vision",
+        "Medical imaging",
+        "Geometric deep learning",
+        "Embodied perception"
+      ],
+      "sameAs": {{ site.social.links | jsonify }}
     }
   </script>
 {% endif %}
@@ -118,25 +157,17 @@
 <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 {% if page.date %}
   <meta property="og:type" content="article">
+{% else %}
+  <meta property="og:type" content="profile">
 {% endif %}
-{% if page.excerpt %}
-  <meta property="og:description" name="description" content="{{ seo_description }}">
-{% elsif site.og_description %}
-  <meta property="og:description" name="description" content="{{ site.og_description }}">
-{% endif %}
+<meta property="og:description" content="{{ seo_description }}">
 {% if seo_url %}
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
 {% endif %}
 
 {% if site.og_image %}
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": {{ seo_url | jsonify }},
-      "logo": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
-    }
-  </script>
+  <meta property="og:image" content="{{ site.og_image | prepend: "/images/" | prepend: seo_url }}">
+  <meta property="og:image:alt" content="Delin An — Scientific AI, Generative Modeling, and 3D Vision">
 {% endif %}
 
 {% if page.header.image %}

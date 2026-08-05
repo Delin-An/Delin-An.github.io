@@ -4,66 +4,71 @@ main:
     conference_short: CVPR 2026
     conference: IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026.
     pdf: https://arxiv.org/abs/2603.22509
-    image: /images/pubs/Sketch2CT.png
-  
+    image: /images/pubs/Sketch2CT.webp
+    summary: A two-stage latent-diffusion framework that turns a sketch and text prompt into structurally coherent 3D masks and CT/MRI volumes.
+
   - title: "AortaDiff: Volume-Guided Conditional Diffusion Models for Multi-Branch Aortic Surface Generation"
     authors: <strong>Delin An</strong>, Pan Du, Jian-Xun Wang, Chaoli Wang
-    conference_short: VIS 25
+    conference_short: VIS 2025
     conference: IEEE Transactions on Visualization and Computer Graphics <strong>(TVCG)</strong>, 2026.
     pdf: https://arxiv.org/abs/2507.13404
-    image: /images/pubs/AortaDiff.png
+    image: /images/pubs/AortaDiff.webp
+    summary: Volume-guided conditional diffusion for robust centerline extraction and smooth, multi-branch aortic surface reconstruction.
 
   - title: "AI-powered automated model construction for patient-specific CFD simulations of aortic flows"
     authors: Pan Du*, <strong>Delin An*</strong>, Chaoli Wang, Jian-Xun Wang
     conference_short: Sci. Adv.
-    conference: Science Advances
+    conference: <strong>Science Advances</strong>, 2025.
     pdf: https://www.science.org/doi/full/10.1126/sciadv.adw2825
-    image: /images/pubs/AI-power.png
-    notes: ⭐ Equal Contribution (Co-First Author)
+    image: /images/pubs/AI-power.webp
+    summary: An end-to-end AI pipeline from medical scans to patient-specific, CFD-ready aortic models for automated flow simulation.
+    notes: Equal contribution · co-first author
 
   - title: "SurfPatch: Enabling Patch Matching for Exploratory Stream Surface Visualization"
     authors: <strong>Delin An</strong>, Chaoli Wang
-    conference_short: TVCG
+    conference_short: TVCG 2025
     conference: IEEE Transactions on Visualization and Computer Graphics <strong>(TVCG)</strong>, 2025.
     pdf: https://ieeexplore.ieee.org/abstract/document/10989515
-    image: /images/pubs/SurfPatch.png
+    image: /images/pubs/SurfPatch.webp
     code: https://github.com/adlsn/SurfPatch
+    summary: Multiscale surface-patch matching and interactive visual analytics for exploring complex 3D flow structures.
 
   - title: "Hierarchical LoG Bayesian neural network for enhanced aorta segmentation"
     authors: <strong>Delin An</strong>, Pan Du, Pengfei Gu, Jian-Xun Wang, Chaoli Wang
-    conference_short: ISBI
+    conference_short: ISBI 2025
     conference: IEEE International Symposium on Biomedical Imaging <strong>(ISBI)</strong>, 2025.
     pdf: https://ieeexplore.ieee.org/abstract/document/10980947
-    image: /images/pubs/LoGBNet.png
+    image: /images/pubs/LoGBNet.webp
     code: https://github.com/adlsn/LoGBNet
-    notes: "🏆 Selected as Oral Presentation"
+    summary: A hierarchical Bayesian network for accurate, uncertainty-aware aorta segmentation in volumetric medical images.
+    notes: Selected as an oral presentation
 
   - title: "Sli2Vol+: Segmenting 3D medical images based on an object estimation guided correspondence flow network"
-    authors: <strong>Delin An</strong>, Pengfei Gu, Milan Sonka, Chaoli Wang, Danny Z Chen
-    conference_short: WACV
+    authors: <strong>Delin An</strong>, Pengfei Gu, Milan Sonka, Chaoli Wang, Danny Z. Chen
+    conference_short: WACV 2025
     conference: IEEE/CVF Winter Conference on Applications of Computer Vision <strong>(WACV)</strong>, 2025.
     pdf: https://ieeexplore.ieee.org/abstract/document/10943895
-    image: /images/pubs/Sli2Volplus.png
+    image: /images/pubs/Sli2Volplus.webp
     code: https://github.com/adlsn/Sli2Volplus
+    summary: Object-guided correspondence flow propagates a single annotated slice through an entire 3D volume with strong structural consistency.
 
   - title: "Research on Lower Limb Rehabilitation Exoskeleton Control based on Improved Dynamic Motion Primitives"
     authors: Xian Yue, Aibin Zhu, Peifeng Ma, <strong>Delin An</strong>, Diyang Dang, Yulin Zhang
-    conference_short: ICARM
+    conference_short: ICARM 2022
     conference: IEEE International Conference on Advanced Robotics and Mechatronics <strong>(ICARM)</strong>, 2022.
     pdf: https://ieeexplore.ieee.org/document/9959156
     image: /images/pubs/DMP.png
 
   - title: "Environmental obstacle detection and localization model for cable-driven exoskeleton"
     authors: <strong>Delin An</strong>, Aibin Zhu, Xian Yue, Diyang Dang, Yulin Zhang
-    conference_short: UR
+    conference_short: UR 2022
     conference: IEEE International Conference on Ubiquitous Robots <strong>(UR)</strong>, 2022.
     pdf: https://ieeexplore.ieee.org/abstract/document/9826283
     image: /images/pubs/exoskeleton.png
-  
+
   - title: "The Design and Implementation of Human Motion Capture System Based on CAN Bus"
     authors: Xian Yue, Aibin Zhu, Jiyuan Song, Guangzhong Cao, <strong>Delin An</strong>, Zhifu Guo
-    conference_short: UR
+    conference_short: UR 2020
     conference: IEEE International Conference on Ubiquitous Robots <strong>(UR)</strong>, 2020.
     pdf: https://ieeexplore.ieee.org/abstract/document/9144858
     image: /images/pubs/CANBus.png
-  
