@@ -4,6 +4,7 @@ main:
     conference_short: CVPR 2026
     conference: IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026.
     pdf: https://arxiv.org/abs/2603.22509
+    page: https://delin-an.github.io/Sketch2CT/
     code: https://github.com/adlsn/Sketch2CT
     image: /images/pubs/Sketch2CT.webp
     summary: A two-stage latent-diffusion framework that turns a sketch and text prompt into structurally coherent 3D masks and CT/MRI volumes.
