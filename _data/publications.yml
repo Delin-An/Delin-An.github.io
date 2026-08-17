@@ -15,6 +15,7 @@ main:
     conference: IEEE Transactions on Visualization and Computer Graphics <strong>(TVCG)</strong>, 2026.
     pdf: https://arxiv.org/abs/2507.13404
     page: https://delin-an.github.io/AortaDiff/
+    code: https://github.com/adlsn/AortaDiff
     image: /images/pubs/AortaDiff.webp
     summary: Volume-guided conditional diffusion for robust centerline extraction and smooth, multi-branch aortic surface reconstruction.
 
