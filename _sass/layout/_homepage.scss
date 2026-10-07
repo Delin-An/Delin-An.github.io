@@ -758,14 +758,23 @@
   }
 
   &__image--diagram {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
     min-height: 0;
     aspect-ratio: auto;
-    padding-top: 2rem;
-    background: #fff;
+    background: transparent;
 
     img {
       display: block;
       height: auto;
+    }
+
+    > span {
+      position: static;
+      order: -1;
+      align-self: flex-start;
+      margin-bottom: 0.35rem;
     }
   }
 
