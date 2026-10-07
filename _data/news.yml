@@ -1,6 +1,6 @@
 main:
   - date: "2026.10"
-    content: 'New paper in <strong>Advanced Engineering Informatics</strong>: conditional diffusion for ground motion identification under uncertainty. Co-first author.'
+    content: 'New paper in Advanced Engineering Informatics: conditional diffusion for ground motion identification under uncertainty. Co-first author.'
   - date: 2026
     content: Joined Cornell University as a Postdoctoral Researcher, working on scientific machine learning and generative modeling.
   - date: 2026.03

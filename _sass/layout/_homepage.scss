@@ -727,6 +727,12 @@
     min-height: 190px;
     aspect-ratio: 1.62;
     background: var(--home-paper-deep);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: none;
+    }
 
     img {
       width: 100%;
@@ -758,8 +764,6 @@
   }
 
   &__image--diagram {
-    display: flex;
-    flex-direction: column;
     align-self: start;
     min-height: 0;
     aspect-ratio: auto;
@@ -768,13 +772,6 @@
     img {
       display: block;
       height: auto;
-    }
-
-    > span {
-      position: static;
-      order: -1;
-      align-self: flex-start;
-      margin-bottom: 0.35rem;
     }
   }
 
