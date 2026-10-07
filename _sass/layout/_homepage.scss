@@ -757,6 +757,18 @@
     }
   }
 
+  &__image--diagram {
+    min-height: 0;
+    aspect-ratio: auto;
+    padding-top: 2rem;
+    background: #fff;
+
+    img {
+      display: block;
+      height: auto;
+    }
+  }
+
   &__body {
     align-self: center;
   }

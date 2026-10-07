@@ -131,7 +131,7 @@ layout: compress
           <div class="home-paper-list">
             {% for paper in site.data.publications.main limit:7 %}
             <article class="home-paper">
-              <a class="home-paper__image" href="{{ paper.pdf }}" aria-label="Read {{ paper.title }}">
+              <a class="home-paper__image{% if paper.image_layout == 'diagram' %} home-paper__image--diagram{% endif %}" href="{{ paper.pdf }}" aria-label="Read {{ paper.title }}">
                 <img src="{{ base_path }}{{ paper.image }}" alt="{% if paper.image_alt %}{{ paper.image_alt | escape }}{% else %}Visual abstract for {{ paper.title | escape }}{% endif %}" loading="lazy">
                 <span>{{ paper.conference_short }}</span>
               </a>
