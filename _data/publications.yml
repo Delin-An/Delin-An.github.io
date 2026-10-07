@@ -59,7 +59,7 @@ main:
   - title: "Using conditional diffusion models for data-driven ground motion identification of structural dynamic systems under uncertainty"
     authors: Jichuan Tang<sup>*</sup>, <strong>Delin An<sup>*</sup></strong>, Patrick T. Brewick, Chaoli Wang
     conference_short: AEI 2027
-    conference: <strong>Advanced Engineering Informatics</strong>, 77, 105330, 2027.
+    conference: <strong>Advanced Engineering Informatics</strong>, 2027.
     pdf: https://www.sciencedirect.com/science/article/pii/S1474034626010220
     image: /images/pubs/InvSHMDiff-pipeline.webp
     image_layout: diagram
