@@ -56,6 +56,16 @@ main:
     code: https://github.com/adlsn/Sli2Volplus
     summary: Object-guided correspondence flow propagates a single annotated slice through an entire 3D volume with strong structural consistency.
 
+  - title: "Using conditional diffusion models for data-driven ground motion identification of structural dynamic systems under uncertainty"
+    authors: Jichuan Tang, <strong>Delin An</strong>, Patrick T. Brewick, Chaoli Wang
+    conference_short: AEI 2027
+    conference: <strong>Advanced Engineering Informatics</strong>, 77, 105330, 2027.
+    pdf: https://www.sciencedirect.com/science/article/pii/S1474034626010220
+    image: /images/pubs/InvSHMDiff.svg
+    image_alt: "InvSHMDiff: conditional diffusion for ground motion identification under uncertainty"
+    summary: Conditional diffusion models recover ground motion from sparse structural responses while accounting for uncertainty in structural dynamic systems.
+    notes: Co-first author
+
   - title: "Research on Lower Limb Rehabilitation Exoskeleton Control based on Improved Dynamic Motion Primitives"
     authors: Xian Yue, Aibin Zhu, Peifeng Ma, <strong>Delin An</strong>, Diyang Dang, Yulin Zhang
     conference_short: ICARM 2022

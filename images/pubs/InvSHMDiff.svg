@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">InvSHMDiff</title>
+  <desc id="desc">Conditional diffusion for ground motion identification under uncertainty. A typographic publication card.</desc>
+  <rect width="1000" height="620" fill="#edf2f7"/>
+  <path d="M48 116V572H952V48H850" fill="none" stroke="#c5d2df" stroke-width="2"/>
+  <path d="M90 180H165" stroke="#b31b1b" stroke-width="4"/>
+  <text x="90" y="225" fill="#476682" font-family="Arial, Helvetica, sans-serif" font-size="21" letter-spacing="3">SCIENTIFIC MACHINE LEARNING</text>
+  <text x="86" y="335" fill="#172d47" font-family="Georgia, 'Times New Roman', serif" font-size="88">InvSHMDiff</text>
+  <text x="90" y="400" fill="#3e5873" font-family="Arial, Helvetica, sans-serif" font-size="30">Ground motion identification</text>
+  <text x="90" y="444" fill="#3e5873" font-family="Arial, Helvetica, sans-serif" font-size="30">under uncertainty</text>
+  <path d="M90 484H910" stroke="#c5d2df" stroke-width="2"/>
+  <text x="90" y="530" fill="#476682" font-family="Arial, Helvetica, sans-serif" font-size="21" letter-spacing="1">CONDITIONAL DIFFUSION</text>
+  <text x="910" y="530" text-anchor="end" fill="#476682" font-family="Arial, Helvetica, sans-serif" font-size="21" letter-spacing="1">STRUCTURAL DYNAMICS</text>
+</svg>
